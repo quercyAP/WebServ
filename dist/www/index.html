@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <header>
+    <title>WebServ1.0</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:500,400,300,200,100' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js" type="module"></script>
+    <script src="app.js" type="module"></script>
+    <link href="style.css" rel="stylesheet" />
+  </header>
+  <body> 
+
+    <nav class="nav-extended ">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">42 WebServ</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li class="active exemple"><a href="#exemple">Exemple</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li class="active exemple"><a href="#exemple">Exemple</a></li>
+        </ul>
+      </div>
+      <div class="nav-content" id="toggle">
+        <ul class="tabs tabs-transparent">
+          <li class="tab tab-all"><a href="">Toutes</a></li>
+          <li class="tab tab-redir"><a href="">Redirection</a></li>
+          <li class="tab tab-cgi"><a href="">CGI</a></li>
+          <li class="tab tab-other"><a href="">Autre</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <div class="container">
+      <div class="row redir">
+        <div class="col s12 m4">
+          <div class="card blue lighten-4 small z-depth-5">
+            <div class="card-content black-text">
+              <span class="card-title">Redirection multiple</span>
+              <p>
+                Une redirection multiple en HTTP (statut 3xx) consiste en une série de réponses 
+                avec des codes de statut tels que 301 (redirection permanente) ou 302 (redirection temporaire) 
+                qui renvoient le client vers différentes URLs.
+              </p>
+            </div>
+            <div class="card-action">
+              <a href="/redirmultiple">Lien</a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card blue lighten-4 small z-depth-5">
+            <div class="card-content black-text">
+              <span class="card-title">Redirection permanente</span>
+              <p>Une redirection permanente en HTTP (statut 301) est une réponse 
+                du serveur indiquant que la ressource a été déplacée de manière
+                permanente vers une nouvelle URL
+              </p>
+            </div>
+            <div class="card-action">
+              <a href="/redirpermanente">Lien</a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card blue lighten-4 small z-depth-5">
+            <div class="card-content black-text">
+              <span class="card-title">Redirection temporaire</span>
+              <p>Une redirection temporaire en HTTP (statut 302) est une 
+                réponse du serveur indiquant que la ressource a été déplacée temporairement 
+                vers une nouvelle URL.</p>
+            </div>
+            <div class="card-action">
+              <a href="/redirtemp">Lien</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row cgi">
+        <div class="col s12 m12">
+          <div class="card blue lighten-4 small z-depth-5">
+            <div class="card-content black-text">
+              <span class="card-title">CGI Python</span>
+               <p>
+                 Un CGI (Common Gateway Interface) en Python est un programme ou un 
+                 script qui s'exécute sur un serveur web pour générer des pages web dynamiques.
+                  Il reçoit des demandes HTTP du navigateur d'un utilisateur, effectue un traitement 
+                  en fonction de ces demandes, puis renvoie une réponse au navigateur sous la forme d'une
+                   page web générée en temps réel
+               </p>
+             </div>
+             <div class="card-action">
+               <a href="/python-cgi">Lien</a>
+             </div>
+          </div>
+        </div>
+      </div>
+      <div class="row other">
+        <div class="col s6 m6">
+          <div class="card blue lighten-4 small z-depth-5">
+            <div class="card-content black-text">
+              <span class="card-title">Page 404 custom</span>
+              <p>
+                Cette démonstration met en évidence la possibilité d'ajouter des pages 
+                d'erreur personnalisées pour tous les codes d'erreur, gérés par 
+                la directive 'error_page' dans notre fichier de configuration.
+              </p>
+            </div>
+            <div class="card-action">
+              <a href="/testcustom404">Lien</a>
+            </div>
+          </div>
+        </div>
+        <div class="col s6 m6">
+          <div class="card blue lighten-4 small z-depth-5">
+            <div class="card-content black-text">
+              <span class="card-title">Autoindex</span>
+              <p>Cette illustration présente la fonction de la directive 'autoindex'
+                dans notre configuration, permettant la génération automatique de listes
+                de fichiers pour les répertoires lorsque l'index par défaut n'est pas trouvé.
+              </p>
+            </div>
+            <div class="card-action">
+              <a href="/autoindex">Lien</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row other">
+        <form class="formul">
+          <div class="file-field input-field">
+              <div class="btn">
+                <span class="text">Upload File</span>
+                <input type="file" id="fileInput">
+                <i class="material-icons right">upload_file</i>
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+              </div>
+            <button class="btn waves-effect waves-light blue lighten-4" id="submit">Submit
+              <i class="material-icons right">send</i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="row other">
+        <form class="deleted">
+          <div class="input-field col s10">
+            <input id="deleted" type="text" class="validate">
+            <label for="deleted">File to delete</label>
+          </div>
+          <button class="btn waves-effect waves-light blue lighten-4" id="delete">Delete
+            <i class="material-icons right">delete</i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+      <div class="container">
+        <div class="row other">
+          <form class="downloaded">
+            <div class="input-field col s10">
+              <input id="downloaded" type="text" class="validate">
+              <label for="download">File to download</label>
+            </div>
+            <button class="btn waves-effect waves-light" id="download">Download
+              <i class="material-icons right">download_file</i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+  </body>
+</html>
