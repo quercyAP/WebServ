@@ -1,16 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: tdechand <tdechand@student.42mulhouse.f    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/12/05 07:31:25 by tdechand          #+#    #+#              #
-#    Updated: 2023/09/26 18:43:07 by tdechand         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
-
 SRCS			= clientConnexion/ClientConnexion.cpp \
 				 config/ADirective.cpp \
 				 config/ConfParser.cpp \
